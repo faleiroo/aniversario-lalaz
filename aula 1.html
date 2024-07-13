@@ -1,0 +1,321 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Aniversário</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .stars, .shooting-stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .stars {
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: 
+        500px 200px #fff,
+        700px 300px #fff,
+        1000px 500px #fff,
+        1200px 600px #fff,
+        1400px 800px #fff,
+        1600px 1000px #fff,
+        1800px 1200px #fff,
+        2000px 1400px #fff;
+      animation: twinkle 200s linear infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        box-shadow: 
+          500px 200px #fff,
+          700px 300px #fff,
+          1000px 500px #fff,
+          1200px 600px #fff,
+          1400px 800px #fff,
+          1600px 1000px #fff,
+          1800px 1200px #fff,
+          2000px 1400px #fff;
+      }
+      50% {
+        box-shadow: 
+          500px 200px #fff,
+          700px 300px #eee,
+          1000px 500px #fff,
+          1200px 600px #ddd,
+          1400px 800px #fff,
+          1600px 1000px #ccc,
+          1800px 1200px #fff,
+          2000px 1400px #bbb;
+      }
+    }
+
+    .shooting-stars {
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: 
+        800px 200px #fff,
+        1500px 500px #fff,
+        2000px 800px #fff,
+        1000px 1000px #fff;
+      animation: shooting 10s linear infinite;
+    }
+
+    @keyframes shooting {
+      0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-2000px) translateY(1000px);
+        opacity: 0;
+      }
+    }
+
+    .titu {
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+      font-size: 3em;
+      background: linear-gradient(to right, rgba(117, 3, 240, 0.562), white);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent; 
+    }
+
+    p {
+      
+      margin: 20px;
+      padding: 10px;
+      color: #dddddde8;
+      font-family: 'Raleway', sans-serif; 
+      text-align: justify;
+      font-size:70%;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        color: #333;
+      }
+      to {
+        opacity: 1;
+        color: #dddddde8;
+      }
+    }
+
+    .fadeIn {
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .fadeIn-delay-2s {
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 2s;
+    }
+
+    .fadeIn-delay-4s {
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 4s;
+    }
+
+    .fadeIn-delay-6s {
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 6s;
+    }
+
+    .fadeIn-delay-8s {
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 8s;
+    }
+
+    .fadeIn-delay-10s {
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 10s;
+    }
+
+    .slideshow-container {
+    position: relative;
+    max-width: 50%;
+    margin: auto;
+  }
+  .mySlides {
+    display: none;
+  }
+  .mySlides img {
+    width: 50%;
+    height: auto;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+</style>
+  </style>
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="shooting-stars"></div>
+    <h1 class="titu">Feliz Aniversário</h1>
+    <p class="fadeIn-delay-2s">
+      Para começar a falar de você, eu vou precisar de muito mais do que palavras. Como falar um simples te amo para a pessoa que te tirou do fundo do poço, deu a você esperanças, se propôs a todo dia estar lá com você, dia após dia, mesmo quando tudo estava desabando em cima dela? Uma pessoa que, mesmo triste, apavorada, ainda assim me ajudava a curar feridas que nem sequer ela fez. Mesmo nas situações em que ela tinha todos os motivos para desistir e encontrar uma pessoa melhor, menos complicada, escolheu me entender. Você ensinou um menino quebrado a ser amado. Você me deu um propósito para viver, você me ajudou a me reconstruir. Eu sei que as pessoas não são perfeitas, mas para mim você é a pessoa que mais se aproxima de ser. Você tem sido a pessoa mais incrível na minha vida. Eu nunca achei que fosse encontrar alguém tão especial assim na minha vida.
+    </p>
+    <p class="fadeIn-delay-4s">
+      Sei que às vezes parece clichê eu dizer que você, além de minha namorada, é minha melhor amiga. É que, para mim, é incrível você ser a pessoa mais próxima de mim e, ao mesmo tempo, eu conseguir me divertir a cada conversa boba que nós temos. Você sempre está lá para mim, sempre que preciso. Você ter esse jeito tão fofo e cuidadoso comigo me fez me sentir tão amado e tão querido. Sei lá, para mim é muito maravilhoso e mágico isso. Eu vi que amar significa mais do que só olhar um belo corpo, uma aparência ou se tem algo a me oferecer. Para mim, tudo deixou de fazer sentido quando eu te conheci. Eu me afoguei na sua imensidão. Você era tão incrível que não tinha – e não tenho palavras até hoje – para descrever o quanto você é algo simplesmente perfeito.
+    </p>
+    <p class="fadeIn-delay-6s">
+      Meus olhos não olharam para sua aparência primeiro, ou corpo primeiro, e sim para você, o que você realmente era. Eu não estou dizendo que você não era bonita ou que seu corpo era feio. Pelo contrário, você é a menina mais linda de toda a existência para mim. Sua boca me excita (uma das minhas partes favoritas em você), seu cabelo é igual a tranças que me puxam a você. Me perco nesses lindos olhos e me encontro com esse lindo sorriso que, além de meu guia, é minha calmaria. Seu corpo eu nem preciso dizer, né? A garota mais gostosa que existe. Seu pezinho de Toddynho lindo me encanta. Sou apaixonado por cada mínimo detalhe de você. Você é a única pessoa que eu me vejo no futuro e eu jamais quero desperdiçar esse futuro.
+    </p>
+    <p class="fadeIn-delay-8s">
+      Meu sonho é te levar para o altar. Eu sempre pedi uma garota incrível para Deus, mas nunca imaginei que Ele me mandaria um anjo. Para te dizer a verdade, até hoje não caiu a minha ficha. A pessoa que eu sempre amei e admirei hoje está comigo. Cara, eu sou muito grato por ter você. Vou passar cada dia da minha vida agradecendo e valorizando por ter você como minha amada mulher. E eu sei que, por mais que eu agradeça, nunca vai ser o suficiente, porque eu nunca vou poder agradecer o bastante. Esse último ano tem sido a melhor coisa que já me aconteceu na vida. Você me resgatou quando eu já não tinha mais nenhuma esperança. Na verdade, todo o tempo que sempre passei com você foram minhas melhores lembranças da minha vida. Minha vida nunca teve muito valor, mas isso mudou quando pude finalmente te chamar de amor.
+    </p>
+    <p class="fadeIn-delay-10s">
+      Eu não faço a mínima ideia do que possa acontecer no futuro. A única certeza que eu tenho é de ser grato por tudo que você já fez por mim. Eu nunca vou desistir ou me cansar de tentar com você. Mesmo que briguemos, mesmo que tenhamos nossas diferenças às vezes, mesmo se isso acontecer, nós nos sentamos, conversamos e resolvemos, porque eu jamais quero te perder, meu amor. Eu sei que eu vacilo muitas vezes com você e eu peço perdão. Eu sei que nem sempre pedir perdão é o suficiente, mas eu juro que sempre que isso acontecer, eu vou dar o meu melhor para ser melhor para você. Então, qualquer coisa, se algum dia te incomodar, por favor, fale. Eu mudo, eu bloqueio, faço de tudo para não te perder ou te magoar. Eu largaria tudo por você, você é minha prioridade. </p>
+      <p class="fadeIn-delay-10s">
+        E com você eu finalmente entendi que você é minha EPIFANIA. Posso não estar presente fisicamente, mas eu queria muito estar do seu ladinho agora, celebrando esse dia tão incrível. E eu sei que daqui a algum tempo eu vou estar. Só peço um pouquinho de paciência, e eu te amo muito, muito mesmo! Lembre-se que você nunca vai estar sozinha, eu sempre vou estar aqui para você. <strong>FELIZ ANIVERSÁRIO!!</strong>
+      </p>
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <img src="img1.jpeg" alt="Imagem 1" style="width:30%">
+        </div>
+        <div class="mySlides">
+          <img src="img2.jpeg" alt="Imagem 2" style="width:30%">
+        </div>
+        <div class="mySlides">
+          <img src="img3.jpeg" alt="Imagem 3" style="width:30%">
+        </div>
+        <div class="mySlides">
+          <img src="img4.jpeg" alt="Imagem 4" style="width:30%">
+
+        </div>
+        <div class="mySlides">
+          <img src="img5.jpeg" alt="Imagem 5" style="width:30%">
+
+        </div>
+        <div class="mySlides">
+          <img src="img6.jpeg" alt="Imagem 6" style="width:30%">
+        </div>
+        <div class="mySlides">
+          <img src="img7.jpeg" alt="Imagem 7" style="width:30%">
+        </div>
+        <div class="mySlides">
+          <img src="img8.jpeg" alt="Imagem 8" style="width:30%">
+        </div>
+        <div class="mySlides">
+          <img src="img9.jpeg" alt="Imagem 9" style="width:30%">
+        </div>
+        <div class="mySlides">
+          <img src="img10.jpeg" alt="Imagem 10" style="width:30%">
+        </div>
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      
+      <br>
+      
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+      </div>
+      
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+      
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+      
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+      
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      
+        setInterval(function() {
+          plusSlides(1);
+        }, 3000);
+      </script>
+      
+      </body>
+      </html>
+      
+      
+      
+     
+  
